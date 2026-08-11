@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ウザイうさぎ｜LINEスタンプ・絵文字まとめ</title>
+<meta name="description" content="小学6年生の娘が考えて、父がつくっている LINEスタンプです 絶妙にウザいけど、憎めない ウザイうさぎのLINEスタンプ・絵文字を全部まとめました。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ウザイうさぎ｜LINEスタンプ・絵文字まとめ">
+<meta property="og:description" content="絶妙にウザいけど、憎めない ウザイうさぎのLINEスタンプ・絵文字を全部まとめました。">
+<meta property="og:image" content="ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/hero.webp">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#eef4fb; --card:#fff; --ink:#2b3a4a; --soft:#6b7c8d;
+  --pink:#ff7fa8; --blue:#4a90d9; --line:rgba(43,58,74,.10);
+  --shadow:0 10px 30px rgba(43,58,74,.10);
+}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN W4","Zen Maru Gothic",
+    "Hiragino Sans","Yu Gothic",-apple-system,"Segoe UI",sans-serif;
+  line-height:1.75; -webkit-text-size-adjust:100%;
+}
+img{max-width:100%; display:block}
+a{color:inherit}
+.wrap{max-width:1080px; margin:0 auto; padding:0 20px}
+
+/* ---------- hero ---------- */
+.hero{position:relative; overflow:hidden; padding:56px 0 40px}
+.hero::before,.hero::after{content:""; position:absolute; border-radius:50%; z-index:0}
+.hero::before{width:420px; height:420px; background:#e2ecf9; left:-160px; top:60px}
+.hero::after{width:300px; height:300px; background:#fde8ef; right:-110px; top:-90px}
+.hero .wrap{position:relative; z-index:1; display:flex; align-items:center; gap:28px; flex-wrap:wrap}
+.hero-text{flex:1 1 320px}
+.hero h1{font-size:clamp(40px,8vw,68px); line-height:1.15; margin:0 0 6px; letter-spacing:.02em}
+.hero h1 .pink{color:var(--pink)}
+.hero .tagline{font-size:clamp(17px,3.4vw,21px); color:var(--blue); font-weight:700; margin:0 0 10px}
+.hero .lead{margin:0 0 18px; color:var(--soft); font-size:15px}
+.hero-img{flex:0 0 200px; max-width:230px; margin-inline:auto}
+.stats{display:flex; gap:8px; flex-wrap:wrap; list-style:none; margin:0; padding:0}
+.stats li{background:#fff; border-radius:999px; padding:6px 15px; font-size:14px; font-weight:700; box-shadow:var(--shadow)}
+.stats li b{color:var(--pink); font-size:17px}
+
+/* ---------- filter ---------- */
+.filter{position:sticky; top:0; z-index:20; background:rgba(238,244,251,.92);
+  backdrop-filter:blur(8px); padding:12px 0; border-bottom:1px solid var(--line)}
+.filter .wrap{display:flex; gap:8px; overflow-x:auto; scrollbar-width:none}
+.filter .wrap::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto; border:2px solid transparent; background:#fff; color:var(--ink);
+  border-radius:999px; padding:8px 18px; font:inherit; font-weight:700; font-size:14px;
+  cursor:pointer; box-shadow:var(--shadow); transition:.15s}
+.chip:hover{transform:translateY(-1px)}
+.chip[aria-pressed="true"]{background:var(--ink); color:#fff}
+.chip small{opacity:.65; margin-left:5px; font-weight:400}
+
+/* ---------- cards ---------- */
+main{padding:32px 0 8px}
+.grid{display:grid; gap:22px; grid-template-columns:1fr; list-style:none; margin:0; padding:0}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card); border-radius:22px; overflow:hidden; box-shadow:var(--shadow);
+  display:flex; flex-direction:column; scroll-margin-top:80px; min-width:0}
+.card.is-hidden{display:none}
+.pop{position:relative; border:0; padding:0; background:#f5f9fd; cursor:zoom-in;
+  display:block; width:100%; min-width:0}
+.pop img{width:100%; max-width:100%; height:auto}
+.zoom{position:absolute; left:50%; bottom:10px; transform:translateX(-50%);
+  background:rgba(43,58,74,.82); color:#fff; font-size:12px; font-weight:700;
+  padding:5px 14px; border-radius:999px; white-space:nowrap; opacity:0; transition:.15s}
+.pop:hover .zoom,.pop:focus-visible .zoom{opacity:1}
+@media(hover:none){.zoom{opacity:1}}
+.body{padding:16px 18px 20px; display:flex; flex-direction:column; flex:1}
+.meta{display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:8px}
+.tag{font-size:12px; font-weight:700; color:#fff; border-radius:6px; padding:3px 9px}
+.tag-stamp{background:var(--blue)} .tag-animated{background:#7c6ce0} .tag-emoji{background:#f0a03c}
+.count{font-size:12.5px; color:var(--soft); font-weight:700}
+.new{font-size:11px; font-weight:700; color:var(--pink); border:1.5px solid var(--pink); border-radius:6px; padding:2px 7px}
+.card h3{margin:0 0 6px; font-size:19px; line-height:1.4}
+.card p{margin:0 0 12px; font-size:14.5px; color:var(--soft)}
+.scenes{display:flex; gap:6px; flex-wrap:wrap; list-style:none; margin:0 0 16px; padding:0}
+.scenes li{font-size:12px; background:#f0f5fb; color:var(--soft); border-radius:999px; padding:3px 11px}
+.cta{margin-top:auto; display:flex; align-items:center; justify-content:center; gap:6px;
+  background:var(--ink); color:#fff; text-decoration:none; font-weight:700; font-size:15px;
+  border-radius:999px; padding:13px 20px; transition:.15s}
+.cta:hover{background:var(--pink)}
+.cta span{transition:.15s}
+.cta:hover span{transform:translateX(3px)}
+
+/* ---------- scenes / about ---------- */
+.block{margin:56px 0}
+.block h2{font-size:24px; margin:0 0 6px; text-align:center}
+.block h2 .pink{color:var(--pink)}
+.block .sub{text-align:center; color:var(--soft); font-size:14px; margin:0 0 24px}
+.scene-list{list-style:none; margin:0; padding:0; display:grid; gap:12px}
+@media(min-width:720px){.scene-list{grid-template-columns:repeat(2,1fr)}}
+.scene{background:#fff; border-radius:18px; padding:15px 18px; box-shadow:var(--shadow);
+  display:flex; gap:14px; align-items:flex-start}
+.scene-emoji{font-size:26px; line-height:1.3}
+.scene-label{margin:0 0 4px; font-weight:700; font-size:15px}
+.scene-links{display:flex; gap:8px; flex-wrap:wrap}
+.scene-links a{font-size:13.5px; color:var(--blue); text-decoration:none; font-weight:700;
+  border-bottom:2px solid rgba(74,144,217,.25)}
+.scene-links a:hover{border-color:var(--blue)}
+.about{background:#fff; border-radius:22px; padding:28px 24px; box-shadow:var(--shadow); text-align:center}
+.about h2{margin:0 0 10px}
+.about p{margin:0 auto 10px; max-width:620px; color:var(--soft); font-size:14.5px; text-align:left}
+.about p:last-child{margin-bottom:0}
+
+/* ---------- footer ---------- */
+footer{padding:36px 0 48px; text-align:center}
+.links{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:0 0 18px; padding:0; list-style:none}
+.links a{background:#fff; border-radius:999px; padding:10px 20px; text-decoration:none;
+  font-weight:700; font-size:14px; box-shadow:var(--shadow); display:inline-block; transition:.15s}
+.links a:hover{transform:translateY(-2px); color:var(--pink)}
+footer small{color:var(--soft); font-size:12.5px; display:block; line-height:2}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed; inset:0; z-index:50; background:rgba(30,40,52,.88); display:none;
+  align-items:center; justify-content:center; padding:20px; overflow:auto}
+.lb.is-open{display:flex}
+.lb img{max-width:min(900px,100%); max-height:88vh; width:auto; border-radius:16px; margin:auto}
+.lb-close{position:fixed; top:14px; right:16px; width:44px; height:44px; border:0; border-radius:50%;
+  background:#fff; color:var(--ink); font-size:22px; font-weight:700; cursor:pointer; line-height:1}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <h1>ウザイ<span class="pink">うさぎ</span></h1>
+      <p class="tagline">絶妙にウザいけど、憎めない</p>
+      <p class="lead">小学6年生の娘が考えて、父がつくっている LINEスタンプです</p>
+      <ul class="stats">
+        <li>スタンプ <b>6</b></li>
+        <li>動くスタンプ <b>1</b></li>
+        <li>絵文字 <b>2</b></li>
+      </ul>
+    </div>
+    <div class="hero-img"><img src="images/hero.webp" alt="ウザイうさぎ" width="230" height="230"></div>
+  </div>
+</header>
+
+<nav class="filter">
+  <div class="wrap">
+    <button class="chip" data-filter="all" aria-pressed="true">ぜんぶ<small>9</small></button>
+    <button class="chip" data-filter="stamp" aria-pressed="false">スタンプ<small>6</small></button>
+    <button class="chip" data-filter="animated" aria-pressed="false">動くスタンプ<small>1</small></button>
+    <button class="chip" data-filter="emoji" aria-pressed="false">絵文字<small>2</small></button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="grid">
+      <article class="card" data-type="stamp" id="p-uzai-usagi-2">
+        <button class="pop" data-full="images/uzai-usagi-2.webp" data-title="ウザイうさぎ2">
+          <img src="images/uzai-usagi-2_card.webp" alt="ウザイうさぎ2 の紹介画像" loading="lazy" width="640" height="640">
+          <span class="zoom">タップで中身を全部見る</span>
+        </button>
+        <div class="body">
+          <div class="meta"><span class="tag tag-stamp">スタンプ</span><span class="count">全16種</span></div>
+          <h3>ウザイうさぎ2</h3>
+          <p>「おはよ？」「りょーかい」「それな？」毎日いちばん打つ言葉だけを16個！ 最初の1個におすすめ</p>
+          <ul class="scenes"><li>あいさつ</li><li>返事</li><li>ツッコミ</li></ul>
+          <a class="cta" href="https://store.line.me/stickershop/product/33889536/ja" target="_blank" rel="noopener">LINEストアで見る <span>→</span></a>
+        </div>
+      </article>
+      <article class="card" data-type="stamp" id="p-yuru-agari">
+        <button class="pop" data-full="images/yuru-agari.webp" data-title="ウザイうさぎ2 ゆる煽り編">
+          <img src="images/yuru-agari_card.webp" alt="ウザイうさぎ2 ゆる煽り編 の紹介画像" loading="lazy" width="640" height="640">
+          <span class="zoom">タップで中身を全部見る</span>
+        </button>
+        <div class="body">
+          <div class="meta"><span class="tag tag-stamp">スタンプ</span><span class="count">全16種</span></div>
+          <h3>ウザイうさぎ2 ゆる煽り編</h3>
+          <p>「しらんけど」「はい論破」雑に返したい時だけを集めた、ゆる〜い煽りセット！</p>
+          <ul class="scenes"><li>雑返事</li><li>ゆる煽り</li><li>やる気ない時</li></ul>
+          <a class="cta" href="https://store.line.me/stickershop/product/33989631/ja" target="_blank" rel="noopener">LINEストアで見る <span>→</span></a>
+        </div>
+      </article>
+      <article class="card" data-type="stamp" id="p-keigo">
+        <button class="pop" data-full="images/keigo.webp" data-title="ウザイうさぎ 丁寧な敬語編">
+          <img src="images/keigo_card.webp" alt="ウザイうさぎ 丁寧な敬語編 の紹介画像" loading="lazy" width="640" height="640">
+          <span class="zoom">タップで中身を全部見る</span>
+        </button>
+        <div class="body">
+          <div class="meta"><span class="tag tag-stamp">スタンプ</span><span class="count">全16種</span><span class="new">NEW</span></div>
+          <h3>ウザイうさぎ 丁寧な敬語編</h3>
+          <p>ちゃんとしてるのに、なぜかウザい！ 目上の人にも送れる敬語スタンプ</p>
+          <ul class="scenes"><li>目上の人</li><li>仕事のLINE</li><li>お礼・お詫び</li></ul>
+          <a class="cta" href="https://store.line.me/stickershop/product/35765326/ja" target="_blank" rel="noopener">LINEストアで見る <span>→</span></a>
+        </div>
+      </article>
+      <article class="card" data-type="stamp" id="p-family-ops">
+        <button class="pop" data-full="images/family-ops.webp" data-title="ウザイうさぎ 家族内業務連絡">
+          <img src="images/family-ops_card.webp" alt="ウザイうさぎ 家族内業務連絡 の紹介画像" loading="lazy" width="640" height="640">
+          <span class="zoom">タップで中身を全部見る</span>
+        </button>
+        <div class="body">
+          <div class="meta"><span class="tag tag-stamp">スタンプ</span><span class="count">全16種</span><span class="new">NEW</span></div>
+          <h3>ウザイうさぎ 家族内業務連絡</h3>
+          <p>帰宅・迎え・ごはん、家族LINEの定型連絡が半目でぜんぶ片づく！</p>
+          <ul class="scenes"><li>家族LINE</li><li>帰宅・迎え</li><li>夫婦・親子</li></ul>
+          <a class="cta" href="https://store.line.me/stickershop/product/35775227/ja" target="_blank" rel="noopener">LINEストアで見る <span>→</span></a>
+        </div>
+      </article>
+      <article class="card" data-type="stamp" id="p-sokuresu-dajare">
+        <button class="pop" data-full="images/sokuresu-dajare.webp" data-title="ウザイうさぎ ダジャレ即レス編">
+          <img src="images/sokuresu-dajare_card.webp" alt="ウザイうさぎ ダジャレ即レス編 の紹介画像" loading="lazy" width="640" height="640">
+          <span class="zoom">タップで中身を全部見る</span>
+        </button>
+        <div class="body">
+          <div class="meta"><span class="tag tag-stamp">スタンプ</span><span class="count">全16種</span><span class="new">NEW</span></div>
+          <h3>ウザイうさぎ ダジャレ即レス編</h3>
+          <p>返事とダジャレを同時に済ませる、欲張りな16個！</p>
+          <ul class="scenes"><li>ダジャレ</li><li>即レス</li><li>ウケ狙い</li></ul>
+          <a class="cta" href="https://store.line.me/stickershop/product/35772283/ja" target="_blank" rel="noopener">LINEストアで見る <span>→</span></a>
+        </div>
+      </article>
+      <article class="card" data-type="stamp" id="p-sokuresu-dajare-2">
+        <button class="pop" data-full="images/sokuresu-dajare-2.webp" data-title="ウザイうさぎ ダジャレ即レス編2">
+          <img src="images/sokuresu-dajare-2_card.webp" alt="ウザイうさぎ ダジャレ即レス編2 の紹介画像" loading="lazy" width="640" height="640">
+          <span class="zoom">タップで中身を全部見る</span>
+        </button>
+        <div class="body">
+          <div class="meta"><span class="tag tag-stamp">スタンプ</span><span class="count">全16種</span><span class="new">NEW</span></div>
+          <h3>ウザイうさぎ ダジャレ即レス編2</h3>
+          <p>ダジャレが足りない人へ、かぶらないネタをもう16個！</p>
+          <ul class="scenes"><li>ダジャレ</li><li>即レス</li><li>ウケ狙い</li></ul>
+          <a class="cta" href="https://store.line.me/stickershop/product/35765291/ja" target="_blank" rel="noopener">LINEストアで見る <span>→</span></a>
+        </div>
+      </article>
+      <article class="card" data-type="animated" id="p-ugoku-2">
+        <button class="pop" data-full="images/ugoku-2.webp" data-title="ウザイうさぎ よく動くスタンプ2">
+          <img src="images/ugoku-2_card.webp" alt="ウザイうさぎ よく動くスタンプ2 の紹介画像" loading="lazy" width="640" height="640">
+          <span class="zoom">タップで中身を全部見る</span>
+        </button>
+        <div class="body">
+          <div class="meta"><span class="tag tag-animated">動くスタンプ</span><span class="count">全8種</span><span class="new">NEW</span></div>
+          <h3>ウザイうさぎ よく動くスタンプ2</h3>
+          <p>手を振る、迫る、耳が垂れる。動くとウザさが増す8個！</p>
+          <ul class="scenes"><li>あいさつ</li><li>お礼</li><li>盛り上げたい時</li></ul>
+          <a class="cta" href="https://store.line.me/stickershop/product/35761711/ja" target="_blank" rel="noopener">LINEストアで見る <span>→</span></a>
+        </div>
+      </article>
+      <article class="card" data-type="emoji" id="p-emoji-32">
+        <button class="pop" data-full="images/emoji-32.webp" data-title="ウザイうさぎ 顔芸リアクション">
+          <img src="images/emoji-32_card.webp" alt="ウザイうさぎ 顔芸リアクション の紹介画像" loading="lazy" width="640" height="640">
+          <span class="zoom">タップで中身を全部見る</span>
+        </button>
+        <div class="body">
+          <div class="meta"><span class="tag tag-emoji">絵文字</span><span class="count">全32種</span><span class="new">NEW</span></div>
+          <h3>ウザイうさぎ 顔芸リアクション</h3>
+          <p>半目の顔芸とジェスチャーだけを32種類！ 文字なしでも気持ちが伝わる</p>
+          <ul class="scenes"><li>文中にまぜる</li><li>リアクション</li><li>グループLINE</li></ul>
+          <a class="cta" href="https://store.line.me/emojishop/product/6a7937f6d0bfcb14043fbc22/ja" target="_blank" rel="noopener">LINEストアで見る <span>→</span></a>
+        </div>
+      </article>
+      <article class="card" data-type="emoji" id="p-emoji-recycle">
+        <button class="pop" data-full="images/emoji-recycle.webp" data-title="ウザイうさぎ絵文字">
+          <img src="images/emoji-recycle_card.webp" alt="ウザイうさぎ絵文字 の紹介画像" loading="lazy" width="640" height="640">
+          <span class="zoom">タップで中身を全部見る</span>
+        </button>
+        <div class="body">
+          <div class="meta"><span class="tag tag-emoji">絵文字</span><span class="count">全32種</span></div>
+          <h3>ウザイうさぎ絵文字</h3>
+          <p>人気ポーズを絵文字化！ 文章にまぜて、気だるさやツッコミをゆるく足せる</p>
+          <ul class="scenes"><li>文中にまぜる</li><li>ひと言そえる</li></ul>
+          <a class="cta" href="https://store.line.me/emojishop/product/6a72d71842a69d24df56eef6/ja" target="_blank" rel="noopener">LINEストアで見る <span>→</span></a>
+        </div>
+      </article>
+  </div>
+
+  <section class="block">
+    <h2>こんな時に、<span class="pink">これ</span></h2>
+    <p class="sub">「どれを買えばいい？」で迷ったら、使う場面から選べます</p>
+    <ul class="scene-list">
+      <li class="scene">
+        <span class="scene-emoji">🐰</span>
+        <div>
+          <p class="scene-label">まずは定番から</p>
+          <div class="scene-links"><a href="#p-uzai-usagi-2">ウザイうさぎ2</a></div>
+        </div>
+      </li>
+      <li class="scene">
+        <span class="scene-emoji">😑</span>
+        <div>
+          <p class="scene-label">雑に返したい・煽りたい</p>
+          <div class="scene-links"><a href="#p-yuru-agari">ウザイうさぎ2 ゆる煽り編</a></div>
+        </div>
+      </li>
+      <li class="scene">
+        <span class="scene-emoji">🙇</span>
+        <div>
+          <p class="scene-label">目上の人・仕事のLINE</p>
+          <div class="scene-links"><a href="#p-keigo">ウザイうさぎ 丁寧な敬語編</a></div>
+        </div>
+      </li>
+      <li class="scene">
+        <span class="scene-emoji">🏠</span>
+        <div>
+          <p class="scene-label">家族の連絡（帰宅・迎え・ごはん）</p>
+          <div class="scene-links"><a href="#p-family-ops">ウザイうさぎ 家族内業務連絡</a></div>
+        </div>
+      </li>
+      <li class="scene">
+        <span class="scene-emoji">🤣</span>
+        <div>
+          <p class="scene-label">笑わせたい・ダジャレで返す</p>
+          <div class="scene-links"><a href="#p-sokuresu-dajare">ウザイうさぎ ダジャレ即レス編</a><a href="#p-sokuresu-dajare-2">ウザイうさぎ ダジャレ即レス編2</a></div>
+        </div>
+      </li>
+      <li class="scene">
+        <span class="scene-emoji">✨</span>
+        <div>
+          <p class="scene-label">動きで盛り上げたい</p>
+          <div class="scene-links"><a href="#p-ugoku-2">ウザイうさぎ よく動くスタンプ2</a></div>
+        </div>
+      </li>
+      <li class="scene">
+        <span class="scene-emoji">💬</span>
+        <div>
+          <p class="scene-label">文章にちょい足し</p>
+          <div class="scene-links"><a href="#p-emoji-32">ウザイうさぎ 顔芸リアクション</a><a href="#p-emoji-recycle">ウザイうさぎ絵文字</a></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block about">
+    <h2>つくっている人</h2>
+    <p>キャラクターとセリフを考えているのは、小学6年生の娘です。「こういう時に、こういうの送りたい」を先に決めてから作っています</p>
+    <p>父（ぶんちゃん）は、絵を仕上げて申請したり、こうして紹介したりする係です。新作は Threads と Instagram でお知らせしています！</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul class="links">
+      <li><a href="https://store.line.me/stickershop/author/6124432/ja" target="_blank" rel="noopener">LINEストアの作者ページ</a></li>
+      <li><a href="https://www.threads.net/@mendokusai.stamp" target="_blank" rel="noopener">Threads</a></li>
+      <li><a href="https://www.instagram.com/mendokusai.stamp/" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+    <small>
+      (C) 2026 bunchan ／ 最終更新 2026-08-11<br>
+      掲載しているスタンプ・絵文字はすべて自作のものです。購入はLINEストアのページから
+    </small>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="紹介画像の拡大">
+  <button class="lb-close" id="lb-close" aria-label="閉じる">×</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+(function(){
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      var f = chip.dataset.filter;
+      chips.forEach(function(c){ c.setAttribute('aria-pressed', String(c === chip)); });
+      cards.forEach(function(card){
+        card.classList.toggle('is-hidden', f !== 'all' && card.dataset.type !== f);
+      });
+    });
+  });
+
+  var lb = document.getElementById('lb');
+  var lbImg = document.getElementById('lb-img');
+  document.querySelectorAll('.pop').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      lbImg.src = btn.dataset.full;
+      lbImg.alt = btn.dataset.title + ' の紹介画像';
+      lb.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  function close(){
+    lb.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  lb.addEventListener('click', function(e){ if(e.target !== lbImg) close(); });
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+})();
+</script>
+</body>
+</html>
