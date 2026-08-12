@@ -46,7 +46,10 @@ GitHub Pages（`dist/` の中身をリポジトリのルートに置く）。
 
 ## メモ
 
-- `pop` のパスは `99_Sbox/mendokusai_stamp/` からの相対
+- `pop` のパスは `99_Sbox/mendokusai_stamp/`（＝ `mendokusai-stamp/imported/`）からの相対
+- 案件によっては `imported/` の外（`mendokusai-stamp/line_emoji/` 直下など）に置かれている。
+  その場合は `../line_emoji/<案件>/06_promo/out/sns_pop_1080.png` のように `..` で辿る
+  （例：無言の圧 改）
 - 顔芸リアクション絵文字だけ案件フォルダがVaultに無いため、POPは
   `site/assets_src/pop_emoji32.png`（`ai-beauty-dealer/mendokusai-stamp-assets` から取得）を使っている
 - ヒーローのうさぎは `line_stamp/2026-08-08_uzai-usagi-keigo/03_processed/final/14.png` の
